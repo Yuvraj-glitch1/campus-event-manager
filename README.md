@@ -1,34 +1,47 @@
-# Campus Event & Club Manager
+# 🎓 Campus Event & Club Manager API
 
-A backend REST API built with **Node.js, Express and MongoDB (Mongoose)** for managing campus events and organizer accounts. It follows a Controller-Route-Model architecture using ES Modules.
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-## Features
-- Organizer registration, login and logout (passwords hashed with `bcrypt`)
-- Full CRUD for campus events
-- Mongoose validation and timestamps
+A RESTful Backend API built with **Node.js**, **Express.js**, and **MongoDB Atlas** designed to manage university club events, hackathons, and student organizer authentication. Built using modern ES Modules (`import`/`export`) and the **Model-Route-Controller (MRC)** architecture.
 
-## Tech Stack
-- Node.js (ES Modules)
-- Express
-- MongoDB + Mongoose
-- dotenv, bcrypt
-- nodemon (dev)
+---
 
-## Project Structure
-```
+## ✨ Key Features
+
+* **🔐 Organizer Authentication:** Secure registration, login, and logout workflows for student club organizers.
+* **🛡️ Password Security:** Automatic password hashing before database storage using `bcrypt` (`pre-save` Mongoose hooks) and encrypted credential comparison.
+* **📅 Full CRUD Operations:** Create, Read, Update (`PATCH`), and Delete campus events stored on **MongoDB Atlas**.
+* **🧱 Modular Architecture:** Clean separation of concerns across `models`, `controllers`, `routes`, and `config`.
+
+---
+
+## 📂 Project Architecture
+
+```text
 campus-event-manager/
 ├── src/
-│   ├── config/        (constants.js, database.js)
-│   ├── controllers/   (user.controller.js, event.controller.js)
-│   ├── models/        (user.model.js, event.model.js)
-│   ├── routes/        (user.route.js, event.route.js)
-│   ├── app.js
-│   └── index.js
-├── .env.example
-├── .gitignore
-├── package.json
-└── README.md
-```
+│   ├── config/
+│   │   ├── constants.js       # Database name & global constants
+│   │   └── database.js        # MongoDB Atlas connection logic
+│   ├── controllers/
+│   │   ├── user.controller.js # Auth logic (Register, Login, Logout)
+│   │   └── event.controller.js# Event CRUD operations
+│   ├── models/
+│   │   ├── user.model.js      # Organizer schema & bcrypt methods
+│   │   └── event.model.js     # Campus Event schema & validations
+│   ├── routes/
+│   │   ├── user.route.js      # /api/v1/users endpoints
+│   │   └── event.route.js     # /api/v1/events endpoints
+│   ├── app.js                 # Express app & middleware configuration
+│   └── index.js               # Server entry point
+├── .env.example               # Environment variables template
+├── .gitignore                 # Ignored files (node_modules, .env)
+├── package.json               # Dependencies & scripts
+└── README.md                  # Project documentation
+
 
 ## Setup
 1. Install dependencies:
