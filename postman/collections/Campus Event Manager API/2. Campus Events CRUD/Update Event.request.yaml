@@ -1,0 +1,15 @@
+$kind: http-request
+name: Update Event
+method: PATCH
+url: 'http://localhost:4000/api/v1/events/update/6ae70d5bc66e4ea5483ffbbe'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "venue": "Seminar Hall B",
+      "maxParticipants": 300
+    }

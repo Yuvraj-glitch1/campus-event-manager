@@ -1,0 +1,3 @@
+$kind: collection
+name: Campus Event Manager API
+description: 'API collection for the Campus Event Manager application. Covers organizer authentication (register, login, logout) and campus event CRUD operations (create, list, update, delete).'

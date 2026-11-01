@@ -1,0 +1,14 @@
+$kind: http-request
+name: Logout Organizer
+method: POST
+url: 'http://localhost:4000/api/v1/users/logout'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "yuvraj@bmu.edu.in"
+    }

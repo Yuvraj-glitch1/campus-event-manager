@@ -1,0 +1,15 @@
+$kind: http-request
+name: Login Organizer
+method: POST
+url: 'http://localhost:4000/api/v1/users/login'
+order: 2000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "yuvraj@bmu.edu.in",
+      "password": "password123"
+    }

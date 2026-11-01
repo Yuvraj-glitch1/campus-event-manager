@@ -1,0 +1,3 @@
+$kind: collection
+name: '1. Organizer Auth'
+description: 'Endpoints for organizer registration, login, and logout.'

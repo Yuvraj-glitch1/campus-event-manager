@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Event
+method: DELETE
+url: 'http://localhost:4000/api/v1/events/delete/REPLACE_WITH_EVENT_ID'
+order: 4000
