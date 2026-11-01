@@ -41,13 +41,11 @@ campus-event-manager/
 ├── .gitignore                 # Ignored files (node_modules, .env)
 ├── package.json               # Dependencies & scripts
 └── README.md                  # Project documentation
-
-
+   ```
 ## Setup
 1. Install dependencies:
    ```bash
    npm install
-   ```
 2. Create your environment file:
    ```bash
    cp .env.example .env
